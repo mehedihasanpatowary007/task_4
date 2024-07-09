@@ -17,7 +17,7 @@ function displayImage(data) {
   if (data) {
     loader.remove();
     data = Array.from(data);
-    data.length = 110;
+    data.length = 21;
 
     data.forEach((element) => {
       const imgDiv = document.createElement("div");
