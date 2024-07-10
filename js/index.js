@@ -23,10 +23,16 @@ function displayImage(data) {
       const imgDiv = document.createElement("div");
       imgDiv.classList.add("image");
       imageContainer.appendChild(imgDiv);
+
       const img = document.createElement("img");
       img.src = element.thumbnailUrl;
-      img.dataset.url = element.url;
       imgDiv.appendChild(img);
+
+      const title = document.createElement('h3');
+      title.classList.add('image_title');
+      title.innerHTML = `Title : ${element.title}`;
+      imgDiv.appendChild(title);
+      img.dataset.url = element.url;
     });
     callback();
   }
